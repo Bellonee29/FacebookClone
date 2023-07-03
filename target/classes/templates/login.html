@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <div class="main">
+        <div class="left">
+            <img src="/img/facebook%201.svg" alt="">
+            <p>Connect with friends and the world around you on Facebook.</p>
+        </div>
+        <div class="right">
+            <form th:action="@{/login}" method="post">
+                <div class="form_body">
+                    <input type="text" name="email" id="userEmail" placeholder="Email" required>
+                    <input type="password" name="password" id="userPassword" placeholder="Password" required>
+                    <button class="login">Log In</button>
+                    <p class="forget">Forgot password?</p>
+                    <hr>
+                </div>
+            </form>
+            <div class="empty">
+                <button class="create" ><a href="/registration">Create new account</a></button>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+</html>

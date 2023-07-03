@@ -1,0 +1,43 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <div class="main">
+        <div class="left">
+            <img src="/img/facebook%201.svg" alt="">
+            <p>Connect with friends and the world around you on Facebook.</p>
+        </div>
+        <div class="right">
+            <form th:action="@{/registration}" method="post">
+                <div class="form_body">
+                    <h3>User Registration</h3>
+                    <input type="text" name="name" id="userEmail" placeholder="Full Name"  required autofocus>
+                    <input type="email" name="email" id="us" placeholder="Email" required>
+                    <select id="gender" name="gender">
+                        <option value="MALE">Male</option>
+                        <option value="FEMALE">Female</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                    <input type="password" name="password" id="userPassword" placeholder="Password"  required>
+                    <button class="login">Sign Up</button>
+                    <div class="content">
+                        <p>People who use our service may have uploaded your contact information to Facebook.
+                            <span class="blue">Learn more.</span></p>
+                        <p>By clicking Sign Up, you agree to our terms,
+                            <span class="blue">Privacy Policy and Cookies Policy</span>. You may receive SMS
+                            notifications from us and can opt out at any time.</p>
+                    </div>
+                </div>
+            </form>
+            <p class="foot"><span>Create a Page</span> for a celebrity, brand, or business.</p>
+        </div>
+    </div>
+</header>
+</body>
+</html>
